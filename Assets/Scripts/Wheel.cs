@@ -29,6 +29,6 @@ public class Wheel : MonoBehaviour
     }
 
     private void OnDrawGizmos() {
-        Gizmos.DrawSphere(transform.position,suspensionLenght);
+        Gizmos.DrawWireSphere(transform.position,suspensionLenght);
     }
 }
