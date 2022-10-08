@@ -167,8 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a40ed914345840edabf0130879ce035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspensionLenght: 0.5
-  suspensionStiffness: 10000
+  suspensionLenght: 0.6
+  suspensionStiffness: 40000
   suspensionDampening: 1000
   carRigidbody: {fileID: 1629671558}
 --- !u!1 &705507993
@@ -309,8 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a40ed914345840edabf0130879ce035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspensionLenght: 0.5
-  suspensionStiffness: 10000
+  suspensionLenght: 0.6
+  suspensionStiffness: 40000
   suspensionDampening: 1000
   carRigidbody: {fileID: 1629671558}
 --- !u!1 &963194225
@@ -441,8 +441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a40ed914345840edabf0130879ce035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspensionLenght: 0.5
-  suspensionStiffness: 10000
+  suspensionLenght: 0.6
+  suspensionStiffness: 40000
   suspensionDampening: 1000
   carRigidbody: {fileID: 1629671558}
 --- !u!1 &1256197518
@@ -556,8 +556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a40ed914345840edabf0130879ce035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspensionLenght: 0.5
-  suspensionStiffness: 10000
+  suspensionLenght: 0.6
+  suspensionStiffness: 40000
   suspensionDampening: 1000
   carRigidbody: {fileID: 1629671558}
 --- !u!1 &1629671556
@@ -572,6 +572,7 @@ GameObject:
   - component: {fileID: 1629671558}
   - component: {fileID: 1629671559}
   - component: {fileID: 1629671560}
+  - component: {fileID: 1629671561}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -639,10 +640,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 100000
-  braking: 200000
+  braking: 100000
   accelerateKey: 119
   brakeKey: 115
   impactPointOffset: {x: 0, y: -1, z: 1}
+--- !u!114 &1629671561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629671556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e4226973237400daa7ce9136413b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnRate: 30000
+  rightKey: 100
+  leftKey: 97
 --- !u!1 &1671140235
 GameObject:
   m_ObjectHideFlags: 0
