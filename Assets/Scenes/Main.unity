@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179844269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.25, y: -1.05, z: 2}
+  m_LocalPosition: {x: -1.25, y: -0.5, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspensionLenght: 0.5
-  suspensionStiffness: 100000
+  suspensionStiffness: 10000
   suspensionDampening: 1000
   carRigidbody: {fileID: 1629671558}
 --- !u!1 &705507993
@@ -290,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742646764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.25, y: -1.05, z: 2}
+  m_LocalPosition: {x: 1.25, y: -0.5, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspensionLenght: 0.5
-  suspensionStiffness: 100000
+  suspensionStiffness: 10000
   suspensionDampening: 1000
   carRigidbody: {fileID: 1629671558}
 --- !u!1 &963194225
@@ -422,7 +422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177998648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.25, y: -1.05, z: -2}
+  m_LocalPosition: {x: -1.25, y: -0.5, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspensionLenght: 0.5
-  suspensionStiffness: 100000
+  suspensionStiffness: 10000
   suspensionDampening: 1000
   carRigidbody: {fileID: 1629671558}
 --- !u!1 &1256197518
@@ -537,7 +537,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351357042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.25, y: -1.05, z: -2}
+  m_LocalPosition: {x: 1.25, y: -0.5, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -557,7 +557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspensionLenght: 0.5
-  suspensionStiffness: 100000
+  suspensionStiffness: 10000
   suspensionDampening: 1000
   carRigidbody: {fileID: 1629671558}
 --- !u!1 &1629671556
@@ -642,6 +642,7 @@ MonoBehaviour:
   braking: 200000
   accelerateKey: 119
   brakeKey: 115
+  impactPointOffset: {x: 0, y: -1, z: 1}
 --- !u!1 &1671140235
 GameObject:
   m_ObjectHideFlags: 0

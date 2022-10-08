@@ -11,31 +11,38 @@ public class CarEngine : MonoBehaviour
     [SerializeField] private KeyCode accelerateKey;
     [SerializeField] private KeyCode brakeKey;
 
+    [SerializeField] private Vector3 impactPointOffset;
+
     private Rigidbody _carRigidbody;
+
+    private Vector3 _groundNormal;
+    private Vector3 _force;
+    private Vector3 _impactPoint;
     void Start()
     {
         _carRigidbody = GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
-    {
-        Vector3 groundNormal;
-        
-        if (!isGrounded(out groundNormal)) return;
+    {   
+        if (!isGrounded(out _groundNormal)) return;
+
+        _force = Vector3.zero;
 
         if (Input.GetKey(accelerateKey))
         {
-            Vector3 accelereationForce = transform.forward * acceleration;
-            accelereationForce = Vector3.ProjectOnPlane(accelereationForce, groundNormal);
-            _carRigidbody.AddForce(accelereationForce);
+            _force += transform.forward * acceleration;
         }
 
         if (Input.GetKey(brakeKey))
         {
-            Vector3 brakingForce = -transform.forward * braking;
-            brakingForce = Vector3.ProjectOnPlane(brakingForce,groundNormal);
-            _carRigidbody.AddForce(brakingForce);
+            _force += -transform.forward * braking;
         }
+
+        _force = Vector3.ProjectOnPlane(_force,_groundNormal);
+        _impactPoint = transform.position + transform.rotation * impactPointOffset;
+
+        _carRigidbody.AddForceAtPosition(_force,_impactPoint);
     }
 
     private bool isGrounded(out Vector3 groundNormal)
